@@ -1,0 +1,9 @@
+services:
+  sail3-api-proxy:
+    image: nginx:1.27-alpine
+    container_name: sail3-api-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
