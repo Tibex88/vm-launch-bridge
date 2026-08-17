@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Reverse-engineering artifacts (sensitive)
+launcher-analysis/
+
+# .NET build outputs
+bin/
+obj/
+publish/
+**/bin/
+**/obj/
+**/publish/
