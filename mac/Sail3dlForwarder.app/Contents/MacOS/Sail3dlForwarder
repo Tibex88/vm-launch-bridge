@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+URL="${1:-}"
+if [[ -z "$URL" ]]; then
+  exit 0
+fi
+/usr/bin/curl -fsS -X POST   -H 'Content-Type: application/json'   --data-binary @-   'http://127.0.0.1:4567/launch' <<JSON
+{"url":"$URL"}
+JSON
